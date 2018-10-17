@@ -29,7 +29,7 @@
 						Data di nascita:<span class="req">*</span>
 					</label>
 					<div class="field-wrap">
-						<input type="date" min="1918-01-01" max="2018-12-31"/>
+						<input type="date" id="data" onkeydown="date()" onchange="date()"/>
 					</div>
 					<label>
 							Indirizzo:<span class="req">*</span>
@@ -57,14 +57,14 @@
 						</label>
 					<div class="field-wrap">
 						
-						<input type="text"/>
+						<input type="text" id="nap" onkeydown="nap()" onchange="nap()"/>
 					</div>
 						<label>
 							No. Telefono:<span class="req">*</span>
 						</label>
 					
 					<div class="field-wrap">
-						<input type="text"/>
+						<input type="text" id="numero" onkeydown="phone()" onchange="phone()"/>
 					</div>
 					<label>
 							E-mail:<span class="req">*</span>
@@ -77,10 +77,11 @@
 							Genere(sesso):<span class="req">*</span>
 						</label>
 					<div class="field-wrap">
-						<input list="gender" name="gender">
+						<input list="gender" name="gender" id="genere" onkeydown="gender()" onchange="gender()"/>
 						<datalist id="gender">
 							<option value="M">
 							<option value="F">
+							<option value="O">
 						</datalist>
 					</div>
 					<label>
@@ -88,14 +89,14 @@
 						</label>
 					<div class="field-wrap">
 						
-						<input type="text"/>
+						<input type="text" id="hobby" onkeydown="hobby()" onchange="hobby()"/>
 					</div>
 					<label>
 							Professione:
 						</label>
 					<div class="field-wrap">
 						
-						<input type="text"/>
+						<input type="text" id="lavoro" onkeydown="work()" onchange="work()"/>
 					</div>
 					<div class="top-row">
 						<div class="field-wrap">
@@ -103,7 +104,7 @@
 						</div>
 					
 						<div class="field-wrap">
-						  <button type="submit" class="button button-block" onclick="delete()"/>Cancella</button>
+						  <button type="submit" class="button button-block" onclick="remove()"/>Cancella</button>
 						</div>
 					</div>
 					
